@@ -9,6 +9,10 @@ const routes: Routes = [
     loadChildren:() => import('./countries/countries.module').then( m => m.CountriesModule ),
   },
   {
+    path: 'mikrotik',
+    loadChildren:() => import('./mikrotik/mikrotik.module').then( m => m.MikrotikModule ),
+  },
+  {
     path: '404',
     component: Page404Component
   },

@@ -39,6 +39,15 @@ export class LayoutPageComponent {
         { name: 'By Region', url: '/countries/by-region' },
         { name: 'All Countries', url: '/countries/all-countries' },
       ]
+    },
+    {
+      label: 'Mikrotik Module',
+      icon: 'route',
+      url: '/countries',
+      pages: [
+        { name: 'Dashboard', url: '/mikrotik/router-dashboard' },
+        { name: 'List of routers', url: '/mikrotik/router-list' },
+      ]
     }
   ]
 
