@@ -17,3 +17,8 @@ Trabajar con pull requests hacia el branch ```dev``` para ir incrementando la ve
 # Angular 18
 
 ```Angular Material 18```
+
+# Dependencies
+
+AOS Library ( Animation on scroll )
+

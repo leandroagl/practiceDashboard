@@ -1,0 +1,21 @@
+<mat-card appearance="outlined" >
+
+  <mat-card-header>
+    <mat-card-title> {{ country.name.common }} </mat-card-title>
+    <mat-card-subtitle> {{ country.population | number }} </mat-card-subtitle>
+  </mat-card-header>
+
+  <img [srcset]="country.flags.png" class="mt-3">
+
+  <mat-card-content class="mt-3">
+    <p> {{ country.altSpellings }} </p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button
+      mat-button
+      [routerLink]="['/countries/id/', country.ccn3]"
+      >+ Info</button>
+  </mat-card-actions>
+
+</mat-card>

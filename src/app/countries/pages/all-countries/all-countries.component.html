@@ -1,0 +1,42 @@
+<div class="flex grid p-4">
+
+  <div class="col-12">
+    <mat-form-field appearance="outline" class="p-4" style="width: 600px;">
+
+      <mat-label>Buscador de paises...</mat-label>
+      <input
+        type="text"
+        matInput
+        [matAutocomplete]="auto"
+        [formControl]="searchInput"
+        (input)="searchCountry()"
+        (keyup.enter)="searchCountry()"
+      >
+
+      <button matSuffix mat-icon-button (click)="clearSearchInput()">
+        <mat-icon>close</mat-icon>
+      </button>
+
+      <mat-autocomplete
+        autoActiveFirstOption
+        #auto="matAutocomplete"
+      >
+
+      @for (country of countries; track $index) {
+        <mat-option>
+          {{ country.name.common }}
+        </mat-option>
+      }
+
+      </mat-autocomplete>
+
+    </mat-form-field>
+  </div>
+
+
+@for (country of countries; track $index) {
+  <div class="col-12 sm:col-4 md:col-3 xl:col-2">
+    <country-card [country]="country"></country-card>
+  </div>
+}
+</div>

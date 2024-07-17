@@ -1,0 +1,22 @@
+<div class="row">
+  <h3 class="p-4">Paises por región</h3>
+  <mat-divider></mat-divider>
+</div>
+
+<div class="flex grid m-4 justify-content-center">
+  <div class="col-8">
+    <mat-tab-group
+      (selectedTabChange)="byRegion($event.tab.textLabel, $event.index)"
+      dynamicHeight
+      [selectedIndex]="selectedTab"
+    >
+      @for (region of regions; track $index) {
+      <mat-tab [label]="region">
+        <div class="example-large-box mat-elevation-z4">
+            <countries-table [countriesData]="countries"></countries-table>
+        </div>
+      </mat-tab>
+      }
+    </mat-tab-group>
+  </div>
+</div>
